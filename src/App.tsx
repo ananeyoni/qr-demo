@@ -1,10 +1,8 @@
-import { BarcodeScanner } from "dynamsoft-javascript-barcode";
+import "./dbr"
 import { useState } from "react";
 import { useEffect } from "react";
 import { VideoDecode } from "./components/scanner";
-
-BarcodeScanner.license = 'DLS2eyJoYW5kc2hha2VDb2RlIjoiMTAxMDcyNjkyLVRYbFhaV0pRY205cSIsIm9yZ2FuaXphdGlvbklEIjoiMTAxMDcyNjkyIn0=';
-BarcodeScanner.engineResourcePath = 'https://cdn.jsdelivr.net/npm/dynamsoft-javascript-barcode@9.0.2/dist/';
+import { BarcodeScanner } from "dynamsoft-javascript-barcode";
 
 function App() {
   const [showScanner, setShowScanner] = useState(false)
