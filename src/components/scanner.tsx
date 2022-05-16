@@ -1,12 +1,8 @@
 import { BarcodeScanner } from 'dynamsoft-javascript-barcode';
 import React from 'react';
+import "./scanner.css"
 
-BarcodeScanner.license = 'DLS2eyJoYW5kc2hha2VDb2RlIjoiMTAxMDcyNjkyLVRYbFhaV0pRY205cSIsIm9yZ2FuaXphdGlvbklEIjoiMTAxMDcyNjkyIn0=';
-BarcodeScanner.engineResourcePath = 'https://cdn.jsdelivr.net/npm/dynamsoft-javascript-barcode@9.0.1/dist/';
-
-interface ScannerProps {
-
-}
+interface ScannerProps {}
 
 class VideoDecode extends React.Component<ScannerProps> {
     pScanner: null | BarcodeScanner;
@@ -20,7 +16,6 @@ class VideoDecode extends React.Component<ScannerProps> {
 
     async componentDidMount() {
         try {
-            // const scanner = (this.pScanner = await BarcodeScanner.createInstance());
             if (!this.pScanner) {
                 this.pScanner = await BarcodeScanner.createInstance();
             }
